@@ -5,7 +5,6 @@ public class Sword extends Weapon{
         super(name, damage);
     }
 
-    @Override
     public String attack() {
         return "SWOOSH";
     }

@@ -2,9 +2,8 @@ package WeaponTypes;
 
 import Enemy.Enemy;
 import Interfaces.IDamage;
-import Interfaces.IWeapon;
 
-public abstract class Weapon implements IWeapon, IDamage {
+public abstract class Weapon implements IDamage {
 
     private String name;
     private int damage;
@@ -25,18 +24,15 @@ public abstract class Weapon implements IWeapon, IDamage {
     }
 
 
-    @Override
     public void inflictDamage(Enemy enemy) {
         enemy.takeDamage(this);
 
     }
 
-    @Override
     public int getDamage() {
         return damage;
     }
 
-    @Override
     public void reduceDurability() {
         this.durability -= 1;
     }

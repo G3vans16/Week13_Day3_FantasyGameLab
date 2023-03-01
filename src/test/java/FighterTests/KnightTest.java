@@ -16,10 +16,9 @@ public class KnightTest {
     Dragon dragon;
 
     @Before
-
     public void setUp(){
         knight = new Knight(" Sir Gareth");
-        club = new Club("Golf", 10);
+        club = new Club("Golf Club", 10);
         dragon = new Dragon(100, 5, "rar" );
     }
 

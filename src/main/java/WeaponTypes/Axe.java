@@ -7,7 +7,6 @@ public class Axe extends Weapon{
         super(name, damage);
     }
 
-    @Override
     public String attack() {
         return "THUD";
     }

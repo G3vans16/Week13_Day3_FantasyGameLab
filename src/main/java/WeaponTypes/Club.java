@@ -5,7 +5,6 @@ public class Club extends Weapon{
         super(name, damage);
     }
 
-    @Override
     public String attack() {
         return "BOSH";
     }

@@ -39,7 +39,6 @@ public class Spell implements IDamage {
         this.type = type;
     }
 
-    @Override
     public String attack() {
         return null;
     }

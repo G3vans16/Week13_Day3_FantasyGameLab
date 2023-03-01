@@ -1,34 +1,48 @@
 package Player.Mage;
+import Enemy.Enemy;
 import Player.Player;
-import Interfaces.IDefend;
-import Interfaces.ISpell;
+import Spells.Spell;
+import WeaponTypes.Weapon;
 
 import java.util.ArrayList;
 
-public abstract class Mage extends Player implements ISpell {
+public abstract class Mage extends Player {
 
-    private ISpell activeSpell;
-    private ArrayList<ISpell> spellList;
+    private Spell activeSpell;
+    private ArrayList<Spell> spellList;
 
     public Mage(String name) {
         super(name);
         this.activeSpell = null;
-        this.spellList = new ArrayList<ISpell>();
+        this.spellList = new ArrayList<>();
     }
 
-    public ISpell getActiveSpell() {
+    public Spell getActiveSpell() {
         return activeSpell;
     }
 
-    public void setActiveSpell(ISpell activeSpell) {
-        this.activeSpell = activeSpell;
+    public void setActiveSpell(Spell spell) {
+        if (spellList.contains(spell)) {
+            this.activeSpell = spell;
+        }
     }
 
-    public ArrayList<ISpell> getSpellList() {
+    public ArrayList<Spell> getSpellList() {
         return spellList;
     }
 
-    public void setSpellList(ArrayList<ISpell> spellList) {
+    public void setSpellList(ArrayList<Spell> spellList) {
         this.spellList = spellList;
     }
+
+    public void addSpell(Spell spell){
+        spellList.add(spell);
+    }
+
+    public void attackEnemy(Enemy enemy){
+        if(activeSpell != null){
+            activeSpell.inflictDamage(enemy);
+        }
+    }
+
 }

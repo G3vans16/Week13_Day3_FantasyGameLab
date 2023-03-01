@@ -5,8 +5,4 @@ public class Wizard extends Mage{
         super(name);
     }
 
-    @Override
-    public String spell() {
-        return null;
-    }
 }

@@ -5,9 +5,5 @@ public class Warlock extends Mage {
         super(name);
     }
 
-    @Override
-    public String spell() {
-        return null;
-    }
 }
 

@@ -2,7 +2,6 @@ package Player.Fighter;
 
 import Enemy.Enemy;
 import Player.Player;
-import Interfaces.IWeapon;
 import WeaponTypes.Weapon;
 import Interfaces.IDamage;
 
@@ -10,8 +9,8 @@ import java.util.ArrayList;
 
 public abstract class Fighter extends Player {
 
-    private IWeapon activeWeapon;
-    private ArrayList<IWeapon> weaponList;
+    private Weapon activeWeapon;
+    private ArrayList<Weapon> weaponList;
 
     public Fighter(String name) {
         super(name);
@@ -19,15 +18,15 @@ public abstract class Fighter extends Player {
         this.weaponList = new ArrayList<>();
     }
 
-    public IWeapon getActiveWeapon() {
+    public Weapon getActiveWeapon() {
         return activeWeapon;
     }
 
-    public ArrayList<IWeapon> getWeaponList() {
+    public ArrayList<Weapon> getWeaponList() {
         return weaponList;
     }
 
-    public void setWeaponList(ArrayList<IWeapon> weaponList) {
+    public void setWeaponList(ArrayList<Weapon> weaponList) {
         this.weaponList = weaponList;
     }
 
