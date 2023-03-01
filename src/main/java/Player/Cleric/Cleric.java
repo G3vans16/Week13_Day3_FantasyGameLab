@@ -20,8 +20,10 @@ public class Cleric extends Player implements IHeal {
         return activePotion;
     }
 
-    public void setActivePotion(HealPotion activePotion) {
-        this.activePotion = activePotion;
+    public void setActivePotion(HealPotion potion) {
+        if (potionList.contains(potion)) {
+            this.activePotion = potion;
+        }
     }
 
     public ArrayList<HealPotion> getPotionList() {
@@ -32,9 +34,18 @@ public class Cleric extends Player implements IHeal {
         this.potionList = potionList;
     }
 
-    public String heal(){
-        return "MEDIC!!!! oh wait that's me";
+    public int getPotionListSize(){
+        return this.potionList.size();
     }
+
+    public void addPotionToList(HealPotion potion) {
+        this.potionList.add(potion);
+    }
+
+    public void heal(Player player){
+         //add code to heal chosen player
+    }
+
 }
 
 

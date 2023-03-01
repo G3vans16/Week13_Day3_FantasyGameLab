@@ -2,5 +2,5 @@ package Interfaces;
 
 public interface IHeal {
 
-    String heal();
+    void heal();
 }

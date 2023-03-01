@@ -17,7 +17,22 @@ public class SwordTest {
 
     public void setUp(){
         dragon = new Dragon(100, 20, "Rar");
-        sword = new Sword("power Bat", 90 );
+        sword = new Sword("Power Bat", 90 );
+    }
+
+    @Test
+    public void hasName(){
+        assertEquals("Power Bat", sword.getName());
+    }
+
+    @Test
+    public void hasDamageValue(){
+        assertEquals(90, sword.getDamage());
+    }
+
+    @Test
+    public void hasDurability(){
+        assertEquals(100, sword.getDurability());
     }
 
     @Test

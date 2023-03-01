@@ -35,14 +35,6 @@ public class Spell implements IDamage {
         this.damage = damage;
     }
 
-    public void setType(SpellTypes type) {
-        this.type = type;
-    }
-
-    public String attack() {
-        return null;
-    }
-
     public void inflictDamage(Enemy enemy){
         enemy.takeDamage(this);
 
